@@ -83,4 +83,16 @@ public class Prestito {
 	public void setDataRestituzionePrestito(Date dataRestituzione) {
 		this.dataRestituzione = dataRestituzione;
 	}
+
+	@Override
+	public String toString() {
+		return "Prestito{" +
+				  "id=" + id +
+				  ", utente=" + utente +
+				  ", pubblicazione=" + pubblicazione +
+				  ", dataInizioPrestito=" + dataInizioPrestito +
+				  ", dataRestituzione=" + dataRestituzione +
+				  ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
+				  '}';
+	}
 }
