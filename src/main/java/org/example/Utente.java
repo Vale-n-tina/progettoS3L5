@@ -18,6 +18,9 @@ public class Utente {
 	@Column(name = "data_nascita")
 	private LocalDate dataNascita;
 
+	public Utente(){
+	}
+
 	public Utente(LocalDate dataNascita, String cognome, String nome, List<Prestito> prestiti) {
 		this.dataNascita = dataNascita;
 		this.cognome = cognome;
@@ -57,5 +60,24 @@ public class Utente {
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public List<Prestito> getPrestiti() {
+		return prestiti;
+	}
+
+	public void setPrestiti(List<Prestito> prestiti) {
+		this.prestiti = prestiti;
+	}
+
+	@Override
+	public String toString() {
+		return "Utente{" +
+				  "numeroTessera=" + numeroTessera +
+				  ", prestiti=" + prestiti +
+				  ", nome='" + nome + '\'' +
+				  ", cognome='" + cognome + '\'' +
+				  ", dataNascita=" + dataNascita +
+				  '}';
 	}
 }
